@@ -124,3 +124,38 @@
 
 
 })(window.jQuery);
+
+
+
+$(document).ready(function() {
+	// Function to check if the elements are in view
+	function checkScroll() {
+	  const windowHeight = $(window).height();
+	  const triggerPoint = windowHeight / 5 * 6; // Trigger point for the animation
+  
+	  // Get the top positions of the elements
+	  const leftItemTop = $('#left-item').offset().top;
+	  const rightItemTop = $('#right-item').offset().top;
+	  const scrollTop = $(window).scrollTop();
+  
+	  // Check if the elements are in view
+	  if (scrollTop + triggerPoint > leftItemTop) {
+		$('#left-item').addClass('show');
+	  }
+  
+	  if (scrollTop + triggerPoint > rightItemTop) {
+		$('#right-item').addClass('show');
+	  }
+	}
+  
+	// Attach the scroll event listener
+	$(window).on('scroll', function() {
+	  checkScroll();
+	});
+  
+	// Initial check in case elements are already in view
+	checkScroll();
+  });
+  
+
+  
