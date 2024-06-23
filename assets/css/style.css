@@ -1395,12 +1395,13 @@ footer.footer-no-gap {
 }
 
 footer {
-  margin-top: 150px;
+  margin-top: 60px;
   background-color: #1e1e1e;
   min-height: 100px;
 }
 
 footer p {
+  margin-top: 5px;
   text-align: center;
   line-height: 100px;
   color: #fff;
