@@ -100,11 +100,11 @@ body {
 }
 
 .section {
-  margin-top: 120px;
+  margin-top: 60px;
 }
 
 .section-heading {
-  margin-bottom: 70px;
+  margin-bottom: 20px;
 }
 
 .section-heading h2 {
@@ -1802,7 +1802,11 @@ body {
   padding: 20px;
   font-family:'Times New Roman', Times, serif
 }
-
+.faqq h2{
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
 @media (max-width: 780px) {
   .faqq {
     max-width: 90%;
