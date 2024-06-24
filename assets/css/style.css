@@ -792,9 +792,7 @@ Banner Style
   margin-top: 0px;
 }
 
-.main-banner .item-1 {
-  background-image: url(../images/banner-01.jpg);
-}
+
 
 .main-banner .item-2 {
   background-image: url(../images/banner-02.jpg);
@@ -1390,35 +1388,29 @@ Footer Style
 --------------------------------------------- 
 */
 
-footer.footer-no-gap {
-  margin-top: 0px;
-}
+
 
 footer {
-  margin-top: 60px;
+  margin-top: 20px;
   background-color: #1e1e1e;
   min-height: 100px;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
 }
 
 footer p {
-  margin-top: 5px;
   text-align: center;
-  line-height: 100px;
   color: #fff;
   font-size: 16px;
   font-weight: 400;
+  margin: 0; /* Remove default margin */
 }
 
-footer p a {
-  color: #fff;
-  transition: all .3s;
-  position: relative;
-  z-index: 3;
-}
 
-footer p a:hover {
-  opacity: 0.75;
-}
+
+
+
 
 
 /* 
@@ -1753,6 +1745,7 @@ Responsive Style
 
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 767px) {
