@@ -1387,22 +1387,50 @@ Footer Style
 */
 
 
-
 footer {
-  margin-top: 20px;
+  margin-top: 15px;
   background-color: #1e1e1e;
-  min-height: 100px;
+  min-height: 90px;
   display: flex;
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center items horizontally */
+  color: #fff;
 }
 
 footer p {
   text-align: center;
-  color: #fff;
   font-size: 16px;
   font-weight: 400;
   margin: 0; /* Remove default margin */
+  color: #fff;
+}
+
+.rowf {
+  display: flex;
+  justify-content: space-around; /* Space items evenly across the container */
+  width: 100%;
+  max-width: 800px; /* Adjust max-width as needed */
+  margin: 0 auto; /* Center align the flex container */
+}
+
+.rowf a {
+  text-decoration: none;
+  color: #fff;
+  margin: 4px;
+}
+.rowf a:hover {
+  color: #f35525;
+}
+
+
+@media (max-width: 768px) {
+  .rowf {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    align-items: center; /* Center align items */
+  }
+  .rowf a {
+    margin: 10px 0; /* Adjust margin for spacing between links */
+  }
 }
 
 
