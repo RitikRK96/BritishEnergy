@@ -158,4 +158,28 @@ $(document).ready(function() {
   });
   
 
+//   Cookies Pop UP
+const cookiePopup = document.querySelector(".cookie-popup");
+const buttons = document.querySelectorAll(".cookie-popup .button");
+
+const executeCodes = () => {
+  // Check if the cookie contains "codinglab"; if so, do not show the popup
+  if (document.cookie.includes("codinglab")) return;
   
+  cookiePopup.classList.add("show");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      cookiePopup.classList.remove("show");
+
+      if (button.id === "acceptBtn") {
+        // Set cookie to expire in 30 days
+        document.cookie = "cookieBy=codinglab; max-age=" + 60 * 60 * 24 * 30;
+      }
+      // You can handle 'Decline' action if needed
+    });
+  });
+};
+
+// Execute the function on page load
+window.addEventListener("load", executeCodes);

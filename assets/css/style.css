@@ -112,6 +112,9 @@ body {
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif; 
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -425,7 +428,7 @@ Header Style
   position: relative;
   background-color: #fff;
   height: 100px;
-  z-index: 100;
+  z-index: 1000;
   -webkit-transition: all .5s ease 0s;
   -moz-transition: all .5s ease 0s;
   -o-transition: all .5s ease 0s;
@@ -1055,143 +1058,6 @@ Fun Facts Style
 --------------------------------------------- 
 */
 
-.fun-facts {
-  text-align: center;
-  margin-top: 125px;
-}
-
-.fun-facts .counter {
-  background-color: #ffeee9;
-  position: relative;
-  border-radius: 10px;
-  width: 270px;
-  padding: 20px 0px;
-  display: inline-block;
-}
-
-.fun-facts .counter h2,
-.fun-facts .counter p {
-  display: inline-flex;
-  vertical-align: middle;
-}
-
-.fun-facts .counter p {
-  text-align: left;
-  font-size: 16px;
-  color: #1e1e1e;
-  font-weight: 600;
-  line-height: 28px;
-}
-
-.fun-facts .counter h2 {
-  margin-right: 25px;
-  font-size: 40px;
-  color: #f35525;
-}
-
-.fun-facts .counter:after {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: #f35525;
-  border-radius: 50%;
-  content: '';
-  right: -25px;
-  top: -25px;
-}
-
-
-/* 
----------------------------------------------
-Best Deal Style
---------------------------------------------- 
-*/
-
-.best-deal {
-  background-color: #fafafa;
-  padding: 100px 0px;
-}
-
-.best-deal .tab-content img {
-  padding: 0px 45px;
-}
-
-.best-deal .tabs-content .nav-link {
-  font-size: 16px;
-  font-weight: 500;
-  background-color: #1e1e1e !important;
-  border-radius: 5px;
-  height: 50px;
-  line-height: 50px;
-  display: inline-block;
-  padding: 0px 25px;
-  color: #fff;
-}
-
-.best-deal .tabs-content .nav-tabs .nav-link.active {
-  background-color: #f35525 !important;
-  color: #fff;
-}
-
-.best-deal .tabs-content ul.nav-tabs {
-  border-bottom: none !important;
-  margin-bottom: 80px;
-  align-items: end;
-  justify-content: end;
-  margin-top: -130px;
-}
-
-.best-deal .tabs-content ul.nav-tabs li {
-  padding-right: 0px;
-  border-right: none;
-  margin-left: 20px;
-}
-
-.best-deal .info-table {
-  border-radius: 10px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-  padding: 35px 30px;
-}
-
-.best-deal .info-table ul li {
-  display: block;
-  margin-bottom: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #eee;
-  text-align: left;
-  font-size: 15px;
-  color: #aaa;
-  font-weight: 400;
-}
-
-.best-deal .info-table ul li:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-
-.best-deal .info-table ul li span {
-  font-size: 20px;
-  color: #1e1e1e;
-  font-weight: 700;
-  float: right;
-  display: inline-block;
-}
-
-.best-deal .tabs-content {
-  padding: 0px;
-  background-color: transparent;
-}
-
-.best-deal .tabs-content h4 {
-  font-size: 17px;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-
-.best-deal .icon-button {
-  margin-top: 30px;
-}
 
 
 /* 
@@ -1434,6 +1300,93 @@ footer p {
 }
 
 
+/* Cookie Pop Up */
+
+.cookie-popup {
+  z-index: 100;
+  position: fixed;
+  bottom: 50px;
+  right: -370px;
+  max-width: 345px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px 25px 22px;
+  transition: right 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cookie-popup.show {
+  right: 20px;
+}
+
+.cookie-popup header {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.cookie-popup header i {
+  color: #f35525;
+  font-size: 32px;
+}
+
+.cookie-popup header h2 {
+  color: #f35525;
+  font-weight: 500;
+}
+
+.cookie-popup .data {
+  margin-top: 16px;
+}
+
+.cookie-popup .data p {
+  color: #333;
+  font-size: 16px;
+}
+
+.cookie-popup .data p a {
+  color: #f35525;
+  text-decoration: none;
+}
+
+.cookie-popup .data p a:hover {
+  text-decoration: underline;
+}
+
+.cookie-popup .buttons {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cookie-popup .buttons .button {
+  border: none;
+  color: #fff;
+  padding: 8px 0;
+  border-radius: 4px;
+  background: #f35525;
+  cursor: pointer;
+  width: calc(100% / 2 - 10px);
+  transition: all 0.2s ease;
+}
+
+.cookie-popup .buttons #acceptBtn:hover {
+  background-color: #e04b1f;
+}
+
+.cookie-popup .buttons #declineBtn {
+  border: 2px solid #f35525;
+  background-color: #fff;
+  color: #f35525;
+}
+
+.cookie-popup .buttons #declineBtn:hover {
+  background-color: #f35525;
+  color: #fff;
+}
 
 
 
